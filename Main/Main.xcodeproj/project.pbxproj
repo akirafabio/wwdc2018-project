@@ -17,6 +17,8 @@
 		2271DA3C2F0B3F3A00B864AB /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271DA3B2F0B3F3A00B864AB /* AppEnvironment.swift */; };
 		2271DA3F2F0B445000B864AB /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271DA3E2F0B445000B864AB /* TestingAppDelegate.swift */; };
 		2271DA412F0B500200B864AB /* HomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271DA402F0B500200B864AB /* HomeItem.swift */; };
+		2271DA452F0B562F00B864AB /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271DA442F0B562F00B864AB /* ReusableView.swift */; };
+		2271DA472F0B575200B864AB /* UITableView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271DA462F0B575200B864AB /* UITableView+Dequeue.swift */; };
 		22BF63792F09A00C0087020D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF63782F09A00C0087020D /* AppDelegate.swift */; };
 		22BF63822F09A0130087020D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22BF63812F09A0130087020D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,8 @@
 		2271DA3B2F0B3F3A00B864AB /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		2271DA3E2F0B445000B864AB /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		2271DA402F0B500200B864AB /* HomeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
+		2271DA442F0B562F00B864AB /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		2271DA462F0B575200B864AB /* UITableView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeue.swift"; sourceTree = "<group>"; };
 		22BF63752F09A00C0087020D /* WWDC2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWDC2018.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22BF63782F09A00C0087020D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22BF63812F09A0130087020D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,6 +133,23 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		2271DA422F0B560700B864AB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2271DA432F0B561500B864AB /* UI */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2271DA432F0B561500B864AB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2271DA442F0B562F00B864AB /* ReusableView.swift */,
+				2271DA462F0B575200B864AB /* UITableView+Dequeue.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		22BF636C2F09A00C0087020D = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				22BF63962F09B2E00087020D /* Application */,
+				2271DA422F0B560700B864AB /* Core */,
 				226E12CD2F09CDCB0081A015 /* Features */,
 				22BF63972F09B2ED0087020D /* Resources */,
 				22BF63862F09A0130087020D /* Info.plist */,
@@ -301,7 +323,9 @@
 				226E12D42F09CF820081A015 /* HomeViewController.swift in Sources */,
 				2271DA3C2F0B3F3A00B864AB /* AppEnvironment.swift in Sources */,
 				2271DA3A2F0B162600B864AB /* main.swift in Sources */,
+				2271DA472F0B575200B864AB /* UITableView+Dequeue.swift in Sources */,
 				223E8C722F09D2A00003EDE7 /* HomeViewModel.swift in Sources */,
+				2271DA452F0B562F00B864AB /* ReusableView.swift in Sources */,
 				2271DA412F0B500200B864AB /* HomeItem.swift in Sources */,
 				226E12CC2F09C6C80081A015 /* AppCoordinator.swift in Sources */,
 				226E12D22F09CF430081A015 /* HomeEntry.swift in Sources */,

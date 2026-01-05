@@ -6,7 +6,7 @@ final class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.showsHorizontalScrollIndicator = false
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.reuseIdentifier)
         return tableView
     }()
 
@@ -49,7 +49,7 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableCell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let tableCell = tableView.dequeueReusableCell(for: indexPath)
 
         let item = viewModel.items[indexPath.row]
         tableCell.textLabel?.text = item.title
