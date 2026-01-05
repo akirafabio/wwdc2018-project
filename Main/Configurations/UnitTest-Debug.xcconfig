@@ -1,11 +1,20 @@
+//
+//  UnitTests-Debug.xcconfig
+//  Main
+//
+
 // Architectures
 SDKROOT = iphoneos
+ONLY_ACTIVE_ARCH = YES
 
 // Assets
 
 // Build Locations
 
 // Build Options
+DEBUG_INFORMATION_FORMAT = dwarf
+ENABLE_TESTABILITY = YES
+VALIDATE_PRODUCT = NO
 
 // Deployment
 COPY_PHASE_STRIP = NO
@@ -17,15 +26,15 @@ IPHONEOS_DEPLOYMENT_TARGET = 12.0
 // Kernel Module
 
 // Linking
-LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks
+BUNDLE_LOADER = $(TEST_HOST)
+LD_RUNPATH_SEARCH_PATHS = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
 
 // Localization
 
 // Packaging
 INFOPLIST_FILE = ${TARGET_NAME}/Info.plist
-PRODUCT_BUNDLE_IDENTIFIER = com.example.wwdc2018
-PRODUCT_MODULE_NAME = Main
-PRODUCT_NAME = WWDC2018
+PRODUCT_BUNDLE_IDENTIFIER = com.example.wwdc2018.tests
+PRODUCT_NAME = $(TARGET_NAME)
 
 // Search Paths
 ALWAYS_SEARCH_USER_PATHS = NO
@@ -34,6 +43,7 @@ ALWAYS_SEARCH_USER_PATHS = NO
 CODE_SIGN_STYLE = Automatic
 
 // Testing
+TEST_HOST = $(BUILT_PRODUCTS_DIR)/WWDC2018.app/WWDC2018
 
 // Text-Based API
 
@@ -46,6 +56,7 @@ CURRENT_PROJECT_VERSION = 1
 // Apple Clang - Code Generation
 GCC_DYNAMIC_NO_PIC = NO
 GCC_NO_COMMON_BLOCKS = YES
+GCC_OPTIMIZATION_LEVEL = 0
 
 // Apple Clang - Custom Compiler Flags
 
@@ -67,7 +78,9 @@ CLANG_ENABLE_OBJC_ARC = YES
 CLANG_ENABLE_OBJC_WEAK = YES
 
 // Apple Clang - Preprocessing
+ENABLE_NS_ASSERTIONS = YES
 ENABLE_STRICT_OBJC_MSGSEND = YES
+GCC_PREPROCESSOR_DEFINITIONS = DEBUG=1 $(inherited)
 
 // Apple Clang - Undefined Behavior Sanitizer
 
@@ -151,11 +164,6 @@ CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES
 CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES_AGGRESSIVE
 CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES
 
-// Asset Catalog Compiler - Options
-ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon
-
-// Interface Builder Storyboard Compiler - Options
-
 // Mac Catalyst - Deployment
 
 // OSACompile - Build Options
@@ -184,8 +192,11 @@ CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES
 CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES
 
 // Swift Compiler - Code Generation
+SWIFT_COMPILATION_MODE = singlefile
+SWIFT_OPTIMIZATION_LEVEL = -Onone
 
 // Swift Compiler - Custom Flags
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG
 
 // Swift Compiler - General
 
@@ -197,4 +208,5 @@ SWIFT_VERSION = 5.0
 // Swift Compiler - Warning Policies
 
 // User-Defined
+MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE
 MTL_FAST_MATH = YES
