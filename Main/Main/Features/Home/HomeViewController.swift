@@ -6,7 +6,7 @@ final class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.showsHorizontalScrollIndicator = false
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.reuseIdentifier)
+        tableView.register(UITableViewCell.self)
         return tableView
     }()
 
