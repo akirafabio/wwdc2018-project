@@ -26,23 +26,14 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "223E8C762F09D50A0003EDE7"
-               BuildableName = "MainTest.xctest"
-               BlueprintName = "MainTest"
-               ReferencedContainer = "container:Main.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2271DA1D2F0A923400B864AB"
+               BlueprintIdentifier = "2271DA2B2F0A928100B864AB"
                BuildableName = "MainTests.xctest"
                BlueprintName = "MainTests"
                ReferencedContainer = "container:Main.xcodeproj">
@@ -70,6 +61,13 @@
             ReferencedContainer = "container:Main.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "IS_RUNNING_TESTS"
+            value = "YES"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

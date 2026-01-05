@@ -13,6 +13,9 @@
 		226E12D22F09CF430081A015 /* HomeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226E12D12F09CF430081A015 /* HomeEntry.swift */; };
 		226E12D42F09CF820081A015 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226E12D32F09CF820081A015 /* HomeViewController.swift */; };
 		2271DA372F0A92B700B864AB /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223E8C832F09D55A0003EDE7 /* HomeViewModelTests.swift */; };
+		2271DA3A2F0B162600B864AB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271DA392F0B162600B864AB /* main.swift */; };
+		2271DA3C2F0B3F3A00B864AB /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271DA3B2F0B3F3A00B864AB /* AppEnvironment.swift */; };
+		2271DA3F2F0B445000B864AB /* TestingAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271DA3E2F0B445000B864AB /* TestingAppDelegate.swift */; };
 		22BF63792F09A00C0087020D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BF63782F09A00C0087020D /* AppDelegate.swift */; };
 		22BF63822F09A0130087020D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22BF63812F09A0130087020D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -38,6 +41,9 @@
 		2271DA222F0A923500B864AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2271DA2C2F0A928100B864AB /* MainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2271DA382F0A956900B864AB /* UnitTests-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "UnitTests-Release.xcconfig"; sourceTree = "<group>"; };
+		2271DA392F0B162600B864AB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2271DA3B2F0B3F3A00B864AB /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		2271DA3E2F0B445000B864AB /* TestingAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingAppDelegate.swift; sourceTree = "<group>"; };
 		22BF63752F09A00C0087020D /* WWDC2018.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWDC2018.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22BF63782F09A00C0087020D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22BF63812F09A0130087020D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,11 +111,20 @@
 		2271DA1F2F0A923500B864AB /* MainTests */ = {
 			isa = PBXGroup;
 			children = (
+				2271DA3D2F0B443A00B864AB /* Application */,
 				223E8C812F09D53A0003EDE7 /* Features */,
 				2271DA222F0A923500B864AB /* Info.plist */,
 			);
 			path = MainTests;
 			sourceTree = SOURCE_ROOT;
+		};
+		2271DA3D2F0B443A00B864AB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2271DA3E2F0B445000B864AB /* TestingAppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
 		};
 		22BF636C2F09A00C0087020D = {
 			isa = PBXGroup;
@@ -156,8 +171,10 @@
 		22BF63962F09B2E00087020D /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				2271DA392F0B162600B864AB /* main.swift */,
 				22BF63782F09A00C0087020D /* AppDelegate.swift */,
 				226E12CB2F09C6C80081A015 /* AppCoordinator.swift */,
+				2271DA3B2F0B3F3A00B864AB /* AppEnvironment.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -270,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2271DA372F0A92B700B864AB /* HomeViewModelTests.swift in Sources */,
+				2271DA3F2F0B445000B864AB /* TestingAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				226E12D42F09CF820081A015 /* HomeViewController.swift in Sources */,
+				2271DA3C2F0B3F3A00B864AB /* AppEnvironment.swift in Sources */,
+				2271DA3A2F0B162600B864AB /* main.swift in Sources */,
 				223E8C722F09D2A00003EDE7 /* HomeViewModel.swift in Sources */,
 				226E12CC2F09C6C80081A015 /* AppCoordinator.swift in Sources */,
 				226E12D22F09CF430081A015 /* HomeEntry.swift in Sources */,
